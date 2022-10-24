@@ -43,4 +43,4 @@ jobs:
           namespace: 'default'
           manifests: |
              azure-vote-all-in-one-redis.yaml
-          images: '${{ secrets.registry }}.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
+          images: 'springakscont.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
