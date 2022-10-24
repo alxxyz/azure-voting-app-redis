@@ -38,9 +38,9 @@ jobs:
         uses: azure/setup-kubectl@v3
       - name: Deploy to AKS
         id: deploy-aks
-        uses: Azure/k8s-deploy@v4
+        uses: Azure/k8s-deploy@v3.1
         with:
-          namespace: 'default'
+          action: deploy
           manifests: |
              azure-vote-all-in-one-redis.yaml
           images: 'springakscont.azurecr.io/${{ secrets.repository }}/azure-vote-front:${{ github.sha }}'
